@@ -75,13 +75,13 @@ include 'tmpl/header.php';
 			<div class="col-md-1">
 			</div>
             <div class="col-md-2">
-              <a href ="http://localhost/login.php?p=google">
+              <a href ="../login.php?p=google">
                 <i class="fa fa-google fa-3x"></i>
                 <b>Google+</b>
               </a>
             </div>
             <div class="col-md-2">
-              <a href ="http://localhost/login.php?p=facebook">
+              <a href ="../login.php?p=facebook">
                 <i class="fa fa-facebook fa-3x"></i>
                 <b>Facebook</b>
               </a>
