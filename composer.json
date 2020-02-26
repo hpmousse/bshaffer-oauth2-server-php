@@ -12,6 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0",
+        "oauth-io/oauth": "0.3.2",
         "mashape/unirest-php" : "2.2.*",
         "twbs/bootstrap": "^3.3@dev"
     },
