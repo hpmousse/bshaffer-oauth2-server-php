@@ -22,7 +22,7 @@ if (isset($_GET['p']) &&
 	try {
 	
 		// Execute authentication process
-		$provider->auth('/index.php');
+		$provider->auth('/oauth.php');
 		
 	} catch (Exception $e) {
 		die($e->getMessage());
