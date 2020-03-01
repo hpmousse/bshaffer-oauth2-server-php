@@ -6,7 +6,11 @@ ini_set("display_errors", 1);
 
 require '../app/OAuthIO.php';
 
-$provider_name = '';
+$json = json_decode([$GET['oauthio']]);
+var_dump($json);
+
+$provider_name = $json->provider;
+
 $errors = array();
 
 if (isset($_SESSION['oauthio']['auth']) &&
