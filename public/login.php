@@ -86,6 +86,12 @@ include 'tmpl/header.php';
                 <b>Facebook</b>
               </a>
             </div>
+            <div class="col-md-2">
+              <a href ="../login.php?p=spotify">
+                <i class="fa fa-spotify fa-3x"></i>
+                <b>Spotify</b>
+              </a>
+            </div>
             <div class="col-md-1">
             </div>
           </div>
