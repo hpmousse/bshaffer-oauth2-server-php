@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 require '../app/OAuthIO.php';
 
@@ -50,6 +52,8 @@ if (count($errors) > 0) {
 		sprintf('Well done %s! You have authenticated using %s.',
 			$me['name'], ucfirst($provider_name)
 		) . '</div>';
+		print_r($me);print "<br>";
+		var_dump($me);print "<br>";
 		
 	}
 }
