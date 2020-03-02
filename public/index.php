@@ -46,7 +46,7 @@ include 'tmpl/header.php';
 if (count($errors) > 0) { 
 
 	print '<div class="alert alert-danger" role="alert">' . 
-	$errors[0] . '. Goto <a href="login.php">login page</a> to authenticate.</div>';
+	$errors[0] . '. Goto <a href="login2.php">login page</a> to authenticate.</div>';
 	
 } else { 
 	if ($client !== false) {
