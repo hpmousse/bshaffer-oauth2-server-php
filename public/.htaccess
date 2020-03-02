@@ -4,5 +4,5 @@ Options +FollowSymlinks
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} !^ 
+RewriteCond %{HTTP_HOST} ^bandwidz.com$ 
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
