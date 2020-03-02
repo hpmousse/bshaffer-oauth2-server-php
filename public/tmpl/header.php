@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="#favicon.ico">
-  <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/css/font-awesome.min.css" rel="stylesheet">
   <title>Demo-OAuth-IO</title>
 </head>
