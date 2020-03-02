@@ -6,7 +6,7 @@ ini_set("display_errors", 1);
 
 require '../app/OAuthIO.php';
 
-$json = json_decode([$GET['oauthio']]);
+$json = json_decode($_GET['oauthio']);
 var_dump($json);
 
 $provider_name = $json->provider;
@@ -50,7 +50,10 @@ if (count($errors) > 0) {
 	
 } else { 
 	if ($client !== false) {
-	
+
+		print_r($client);print "<br>";
+		var_dump($client);print "<br>";
+
 		$me = $client->me();
 		print '<div class="alert alert-success" role="alert">' .
 		sprintf('Well done %s! You have authenticated using %s.',
