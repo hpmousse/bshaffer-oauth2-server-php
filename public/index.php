@@ -37,12 +37,12 @@ if ($client !== false) {
 
 	$me = $client->me();
 		var_dump($me);print "<br>";
-	$me = $request_object->get('/me');
+	$me = $client->get('/me');
 		var_dump($me);print "<br>";
 
 	try {
 
-	$me = $request_object->get('/me');
+	$me = $client->get('/me');
 
 	} catch (\Exception $e) {
 	$errors[] = $e->getMessage();
