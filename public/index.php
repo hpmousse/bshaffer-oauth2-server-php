@@ -55,6 +55,15 @@ if (count($errors) > 0) {
 		var_dump($client);print "<br>";
 
 		$me = $client->me();
+
+		try {
+
+		$client = $me = $client->me();
+
+		} catch (\Exception $e) {
+		$errors[] = $e->getMessage();
+		}
+
 		print '<div class="alert alert-success" role="alert">' .
 		sprintf('Well done %s! You have authenticated using %s.',
 			$me['name'], ucfirst($provider_name)
