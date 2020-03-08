@@ -36,10 +36,13 @@ if ($client !== false) {
 	var_dump($client);print "-vardump<br>";
 
 	$me = $client->me();
+		var_dump($me);print "<br>";
+	$me = $request_object->get('/me');
+		var_dump($me);print "<br>";
 
 	try {
 
-	$me = $client->me();
+	$me = $request_object->get('/me');
 
 	} catch (\Exception $e) {
 	$errors[] = $e->getMessage();
@@ -69,8 +72,6 @@ if (count($errors) > 0) {
 		sprintf('Well done %s! You have authenticated using %s.',
 			$me['name'], ucfirst($provider_name)
 		) . '</div>';
-		print_r($me);print "<br>";
-		var_dump($me);print "<br>";
 
 }
 
