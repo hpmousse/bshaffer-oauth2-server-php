@@ -44,10 +44,10 @@ include 'tmpl/header.php';
 if (count($errors) > 0) { 
 
   print '<div class="alert alert-danger" role="alert">'; 
-  print_r($errors[)
+  print_r($errors);
   print '. Goto <a href="login2.php">login page</a> to authenticate.</div>';
   
-} else { 
+} 
   ?>
 <script>
   </script>
@@ -64,9 +64,6 @@ if (count($errors) > 0) {
   </script>
       <div class="alert alert-success" role="alert">
     </div>
-<?php 
-}
-?>
 	</div>
   </div>
 </div>
