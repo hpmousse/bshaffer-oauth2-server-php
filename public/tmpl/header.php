@@ -9,6 +9,7 @@
   <link rel="icon" href="#favicon.ico">
   <link href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/css/font-awesome.min.css" rel="stylesheet">
+  <script src="dist/auth.min.js"></script>
   <title>Demo-OAuth-IO</title>
 </head>
 <body>
