@@ -33,7 +33,7 @@ try {
 	$errors[] = $e->getMessage();
 }
 
-if ($client !== false) {
+if ($client && $client !== false) {
 
 	$me = $client->me();
 		var_dump($me);print "<br>";
