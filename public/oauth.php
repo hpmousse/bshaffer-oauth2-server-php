@@ -50,17 +50,14 @@ if (count($errors) > 0) {
 } 
   ?>
 <script>
-  </script>
-    OAuth.initialize('Your-public-key');
+    OAuth.initialize('S3HRKiyOpoKAyCHNB8RCZqRoV1w');
 
     //Example with Twitter with the cache option enabled
     OAuth.popup('spotify', {cache: true}).done(function(spotify) {
-    alert('apirequest');
+      alert('apirequest');
     }).fail(function(err) {
-    alert('fail');
-    })
-
-
+      alert('fail');
+    });
   </script>
       <div class="alert alert-success" role="alert">
     </div>
