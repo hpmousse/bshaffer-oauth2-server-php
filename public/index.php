@@ -23,8 +23,6 @@ if (isset($_SESSION['oauthio']['auth']) &&
 $provider = new OAuthIO($provider_name);
 $provider->init();
 
-var_dump($client);print "-vardump<br>";
-
 try {
 	
 	$client = $provider->getClient();
@@ -32,6 +30,7 @@ try {
 } catch (\Exception $e) {
 	$errors[] = $e->getMessage();
 }
+var_dump($client);print "-vardump<br>";
 
 if ($client && $client !== false) {
 
