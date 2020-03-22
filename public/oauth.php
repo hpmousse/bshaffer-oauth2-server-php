@@ -7,9 +7,9 @@ ini_set("display_errors", 1);
 require_once '../vendor/autoload.php';
 require_once '../app/config.inc.php';
 
-print "<br>printr  :";
+print "<br>json  :";
 $json = json_decode($_GET['oauthio']);
-var_dump($json);
+print_r($json);
 print "<br>SEESSION:";print_r($_SESSION);
 
 use OAuth_io\OAuth;
