@@ -7,7 +7,6 @@ ini_set("display_errors", 1);
 require_once '../vendor/autoload.php';
 require_once '../app/config.inc.php';
 
-print "<br>json  :";
 $json = json_decode($_GET['oauthio']);
 print "<br>json:";print_r($json);
 print "<br>SESSION:";print_r($_SESSION);
@@ -36,7 +35,7 @@ if (($output = curl_exec($ch)) == FALSE){
 	$errors[]="Failed to execute cURL session\n";
 }else{
 	$data = json_decode($output);
-	for ($k=0;$k<count($data->items');$k++)
+	for ($k=0;$k<count($data->items);$k++)
 	{
 		$items = json_decode($data->items[$k]);
 	}
