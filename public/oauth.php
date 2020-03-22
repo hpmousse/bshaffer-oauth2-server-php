@@ -38,8 +38,7 @@ if (($output = curl_exec($ch)) == FALSE){
 	$data = json_decode($output);
 	for ($k=0;$k<count($data->items');$k++)
 	{
-		$items = json_decode($data->items]);
-		print "<br>printr:";print_r($items);
+		$items = json_decode($data->items[$k]);
 	}
 }
 curl_close($ch);
