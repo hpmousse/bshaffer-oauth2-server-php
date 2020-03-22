@@ -36,9 +36,9 @@ if (($output = curl_exec($ch)) == FALSE){
 	$errors[]="Failed to execute cURL session\n";
 }else{
 	$data = json_decode($output);
-	for ($k=0;$k<count($data['items']);$k++)
+	for ($k=0;$k<count($data->items');$k++)
 	{
-		$items = json_decode($data['items'][$k]);
+		$items = json_decode($data->items]);
 		print "<br>printr:";print_r($items);
 	}
 }
