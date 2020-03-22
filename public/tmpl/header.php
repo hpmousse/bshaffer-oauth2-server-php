@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="#favicon.ico">
-  <link href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="lib/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" href="#favicon.ico"><link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="dist/oauth.min.js"></script>
   <title>Demo-bandwidz</title>
 </head>
