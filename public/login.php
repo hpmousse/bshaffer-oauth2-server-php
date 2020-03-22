@@ -8,7 +8,7 @@ require '../app/OAuthIO.php';
 if (isset($_SESSION['oauthio']['auth']) &&
 	count($_SESSION['oauthio']['auth']) > 0) {
 	
-	header('Location: /oauth.php');
+	header('Location: /index.php');
 	exit();
 }
 
