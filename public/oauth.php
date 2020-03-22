@@ -26,11 +26,9 @@ try {
 print "<br>printr:";print_r($request_object);
 
 $data = $json->data;
-print "<br>data:";print_r($data);
 $token = $data->access_token;
-print "<br>token:";print_r($token);
 $ch = curl_init();
-$fp = "	https://api.spotify.com/v1/me/player/recently-played";
+$fp = "https://api.spotify.com/v1/me/player/recently-played";
 curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization: Bearer ".$token));
 curl_setopt($ch, CURLOPT_URL,$fp);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
