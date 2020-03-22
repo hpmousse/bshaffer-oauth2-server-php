@@ -32,37 +32,25 @@ include 'tmpl/header.php';
 ?>
 
 <div class="container">
-  <h1>Login Page</h1>
-  <hr>
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-1">
-	<div class="panel panel-default">
+	
 <?php 
 
 if (count($errors) > 0) { 
 
-  print '<div class="alert alert-danger" role="alert">'; 
-  print_r($errors);
-  print '. Goto <a href="login2.php">login page</a> to authenticate.</div>';
-  
-} 
-  ?>
-<script>
-    OAuth.initialize('S3HRKiyOpoKAyCHNB8RCZqRoV1w');
+	print '<div class="alert alert-danger" role="alert">' . 
+	$errors[0] . '. Goto <a href="login.php">login page</a> to authenticate.</div>';
+	
+} else { 
+	
+			print '<div class="alert alert-success" role="alert">' .
+		sprintf('Well done %s! You have authenticated using %s.',
+			$me['name'], ucfirst($provider_name)
+		) . '</div>';
 
-    //Example with Twitter with the cache option enabled
-    OAuth.popup('spotify', {cache: true}).done(function(spotify) {
-      alert('apirequest');
-    }).fail(function(err) {
-      alert('fail');
-    });
-  </script>
-      <div class="alert alert-success" role="alert">
-    </div>
-	</div>
-  </div>
+}
+
+?>
+
 </div>
 
 <?php include 'tmpl/footer.php'; ?>
