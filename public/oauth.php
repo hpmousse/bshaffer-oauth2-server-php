@@ -24,10 +24,11 @@ try {
 }
 
 print "<br>printr:";print_r($request_object);
-print "<br>vardump:";var_dump($request_object);
 
 $data = $json->data;
+print "<br>data:";print_r($data);
 $token = $data->access_token;
+print "<br>token:";print_r($token);
 $ch = curl_init();
 $fp = "	https://api.spotify.com/v1/me/player/recently-played";
 curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization: Bearer ".$token));
@@ -39,7 +40,7 @@ if (($output = curl_exec($ch)) == FALSE){
 	$data = json_decode($output);
 	for ($k=0;$k<count($data['items']);$k++)
 	{
-		$items = json_decode($items);
+		$items = json_decode($data['items'][$k]);
 		print "<br>printr:";print_r($items);
 	}
 }
@@ -56,8 +57,9 @@ include 'tmpl/header.php';
 
 if (count($errors) > 0) { 
 
-	print '<div class="alert alert-danger" role="alert">' . 
-	$errors[0] . '. Goto <a href="login2.php">login page</a> to authenticate.</div>';
+	print '<div class="alert alert-danger" role="alert">';
+	for ($k=0;$k<count($errors);$k++){print $errors[$k]."<br>";}	
+	print ' Goto <a href="login2.php">login page</a> to authenticate.</div>';
 	
 } else { 
 	
