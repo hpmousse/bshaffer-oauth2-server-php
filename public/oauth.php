@@ -9,8 +9,8 @@ require_once '../app/config.inc.php';
 
 print "<br>json  :";
 $json = json_decode($_GET['oauthio']);
-print_r($json);
-print "<br>SEESSION:";print_r($_SESSION);
+print "<br>json:";print_r($json);
+print "<br>SESSION:";print_r($_SESSION);
 
 use OAuth_io\OAuth;
 
@@ -26,15 +26,25 @@ try {
 print "<br>printr:";print_r($request_object);
 print "<br>vardump:";var_dump($request_object);
 
-$token = $json['access_token'];
+$data = $json->data;
+$token = $data->acess_token;
 $ch = curl_init();
 $fp = "	https://api.spotify.com/v1/me/player/recently-played";
 curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization: Bearer ".$token));
 curl_setopt($ch, CURLOPT_URL,$fp);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-if (($output = curl_exec($ch)) == FALSE)
+if (($output = curl_exec($ch)) == FALSE){
 	$errors[]="Failed to execute cURL session\n";
+}else{
+	$data = json_decode($output);
+	for ($k=0;$k<count($data['items']);$k++)
+	{
+		$items = json_decode($items);
+		print "<br>printr:";print_r($items);
+	}
+}
 curl_close($ch);
+
 
 include 'tmpl/header.php';
 
